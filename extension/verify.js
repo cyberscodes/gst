@@ -122,47 +122,24 @@ if (window.location.hostname.indexOf("similarweb") > -1){
     }, 1);
 }
  
-if (window.location.hostname.indexOf("skillshare") > -1){
-    $(".banner-content").remove();
-    $(".gamification-banner").remove();
-    $(".site-header-nav.site-header-nav-right").remove();
-    $("#footer-tall").remove();
-    $(".skills-prompt").remove();
-    $(".community").remove();
-    $(".nav-menu-groups.nav-item").remove();
-    $('a[href="https://www.skillshare.com/home?via=header"]').remove();
-    $(".class-menus-container").remove();
-    $(".project-buttons").remove();
-    $("#comments").remove();
-    $(".js-abuse-flag-href.abuse-flag").remove();
-    $(".site-header-logo").html('<a href="https://www.skillshare.com/browse?via=header" class="site-header-logo-image js-site-header-logo"></a>');
-    $("#home-index .your-classes-wrapper .continue-header h2").html("<h2 style='background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );color:transparent; -webkit-background-clip: text;background-clip: text;font-size:28px'>You're using SkillShare via ProSeoTools Group Buy Service.<br></h2>");
-    $('.follow-button-wrapper-class-details').remove();
-    $('.follow-button-wrapper').remove();
-    $('body').mouseover(function() {
-        $(".community").remove();
-    });
+if (window.location.hostname.indexOf("skillshare") > -1){ 
+    $('.profile-avatar').remove();
+    $("[class*='nav-menu-user-avatar']").remove();
+    $('.notifications-bell-container').remove();
+    $('div#footer-tall').remove();
+    $('.MuiGrid-root.MuiGrid-container').remove();
 }
 
 if (window.location.hostname.indexOf("animoto") > -1){
-    $('#js-hero-banner').remove()
-    $(".always-bottom-footer-with-banner").html("");
-    $(".logged-in-user-nav").html("");
-    $(".wh-flexUser").html("");
-    $("div#js-notifications-area").html("");
-    $('a[href="/pricing"]').remove();
-    $('a[href="http://animoto.com/blog/"]').remove();
-    $('[href="/resources/tutorials/directory"]').remove();
-    $(".js-delete.margin-top-1.pt-delete-icon").remove();
-    $("a>span>div:contains('My Account')").closest('a').remove();
-    $("button>div>p:contains('Send a link for feedback')").closest('button').remove();
-    $("button[class*='s-zendesk']").remove();
-    $('body').mouseover(function() {
-        $(".logged-in-user-nav").html("");
-        $("div#js-notifications-area").html("");
-        $(".wh-flexUser").html("");
-        $('a[href="/pricing"]').remove();
-    });
+    setInterval(function() {
+        $("[id*='ada-chat'],[class*='Header_upsell_'],button[class*='s-zendesk'],[class*='s-user-menu-toggle'],[class*='wh-flexUser']").remove(); 
+        $("button:contains('Log out'), button:contains('Log Out'),button:contains('Delete')").remove();
+        $('[href*="/account"], [href*="/pricing"], [href*="/help"]').remove();
+        $('[aria-label="delete"]').remove();
+        $("button>div>p:contains('Send a link for feedback')").closest('button').remove();
+        if ($('.error:contains("We encountered an error preparing your video, please try again. If you continue to experience issues then reload same page")').length > 0) {
+        window.location.reload();}
+    }, 1);
 }
 
 if (window.location.hostname.indexOf("piktochart") > -1){
@@ -192,23 +169,14 @@ if (window.location.hostname.indexOf("piktochart") > -1){
     });
 }
 
-if (window.location.hostname.indexOf("picmonkey.com") > -1){
-    $('body').mouseover(function(){
-        $(".src-core-components-top_bar--styles-module-account-3f2H4").remove();
-        $(".src-hub-components-navigation--mobile_menu-module-greet-3GgsT").remove();
-        $(".src-apps-picmonkey-components-top_bar--styles-account-2jBic").remove();
-        $(".src-core-components-banners--banner-module-banner-2pXMd.src-core-components-banners--banner-module-error-3XT23").remove();
-        $(".src-core-components-top_bar--styles-account-lgjr6").remove();
-        $(".src-hub-components--hub_page_desktop-module-banner_container-3KR7U.undefined").remove();
-        $(".src-core-components--footer-footer-3GU5J").remove(); 
-        $(".src-home-components--signed_in_home-sidebar-3yOaT").remove();
-        $('a[href="/blog/new-picmonkey"]').remove();
-        $('[data-name="more"]').remove();
-        $("#ctrl-bar-share").remove();
-        $('.src-home-components--gdpr_banner-gdpr_banner-3PB5v').remove();
-        $("footer").remove();
+if (window.location.hostname.indexOf("picmonkey.com") > -1){ 
+   setInterval(function() {
+        $("[class^='src-core-components-top_bar--styles-module-account']").remove();
+        $("[class^='src-hub-components-navigation--mobile_menu-module-greet']").remove();
         $("div#helpMenuContainer").remove();
-    });
+        $('a[href^="/blog/"]').remove();
+        $("footer").remove();
+   }, 1000);
 }
  
 if (window.location.hostname.indexOf("elements.envato") > -1){
@@ -248,6 +216,8 @@ if (window.location.host == 'chat.openai.com'){
 if (window.location.hostname.indexOf("similarweb") > -1){
     $("div[class*='HeaderTitle']").each(function(){($(this).attr('class').indexOf('HeaderTitle')>=0)&&$(this).remove()});
     $("div[class*='RecentsContainer']").each(function(){($(this).attr('class').indexOf('RecentsContainer')>=0)&&$(this).remove()});
+    $("button div:contains('Invite teammates')").parent("button").remove();
+    $("[itemtype='secondaryAction']").remove();
     $('body').mouseover(function() {
         $("div[class*='HeaderTitle']").each(function(){($(this).attr('class').indexOf('HeaderTitle')>=0)&&$(this).remove()});
         $("div[class*='RecentsContainer']").each(function(){($(this).attr('class').indexOf('RecentsContainer')>=0)&&$(this).remove()});
