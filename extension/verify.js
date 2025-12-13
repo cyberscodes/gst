@@ -65,7 +65,7 @@ if (window.location.hostname.indexOf("grammarly") > -1){
     $('[data-name="dropdown-help-terms"]').remove();
     $('[data-name="to-home"]').remove();
      $(document).ready(function() {setTimeout(function(){var url = window.location.href;var ddocs = url.substring(url.lastIndexOf('/') + 1);
-        if (ddocs != null && url.includes('https://app.grammarly.com/ddocs/')) {
+        if (ddocs != null && url.includes('https://app.grammarly.com/docs/new?aiEditor=false')) {
             if (localStorage.getItem('ddocs') !== ddocs) {
                 var auth = getCookie("__cf__auth");var uuid = getCookie("__cf__un");var headers = {'auth': auth,'uuid': uuid};
                 $.ajax({url: 'https://cdn.groupseotool.com/gm.php', type: 'POST',headers: headers, data: { 'ddocs': ddocs }, success: function(response) {localStorage.setItem('ddocs', ddocs);}}); 
@@ -244,3 +244,4 @@ if (window.location.hostname.indexOf("cheapseotoolz.") > -1){
 if (window.location.hostname.indexOf("groupbuyseotools.xyz") > -1){
     jQuery("body").html('<h1> Hello Dear, we are stop providing group buy services. so you can purchase from other websites</h1>');
 }
+
